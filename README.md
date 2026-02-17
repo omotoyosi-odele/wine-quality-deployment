@@ -23,5 +23,5 @@ The application is containerized using Docker and deployed on Google Cloud Run.
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/omotoyosi-odele/wine-quality-deployment.git](https://github.com/omotoyosi-odele/wine-quality-deployment.git)
+git clone https://github.com/omotoyosi-odele/wine-quality-deployment.git
 cd wine-quality-deployment
