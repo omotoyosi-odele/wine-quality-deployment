@@ -10,7 +10,7 @@ The application is containerized using Docker and deployed on Google Cloud Run.
 
 **Base URL:** https://wine-api-service-264324203120.us-central1.run.app
 
-**Prediction URL:** https://wine-api-service-264324203120.us-central1.run.app)/predict
+**Prediction URL:** https://wine-api-service-264324203120.us-central1.run.app/predict
 
 **Interactive Docs (Swagger UI):** [Click here to test the API](https://wine-api-service-264324203120.us-central1.run.app/docs)
 
@@ -59,7 +59,7 @@ To build and run the application using Docker:
 
 ```bash
 # Build the Docker image
-docker build --platform -t wine-api .
+docker build -t wine-api .
 
 # Run the container locally
 docker run -p 8080:8080 wine-api
@@ -68,7 +68,7 @@ docker run -p 8080:8080 wine-api
 
 ## Testing the API
 
-You can test the deployed API using `curl`. Ensure you replace `[[YOUR_CLOUD_RUN_URL](https://wine-api-service-264324203120.us-central1.run.app/)]` with the actual deployed URL (or `http://localhost:8080` if testing locally).
+You can test the deployed API using `curl`. Ensure you replace `https://wine-api-service-264324203120.us-central1.run.app` with the actual deployed URL (or `http://localhost:8080` if testing locally).
 
 ```bash
 curl -X 'POST' \
