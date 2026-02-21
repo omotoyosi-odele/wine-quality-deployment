@@ -99,6 +99,38 @@ curl -X 'POST' \
 }
 
 ```
+### Testing via Swagger UI (Interactive Docs)
+FastAPI automatically generates an interactive graphical interface to test the API directly from your browser. 
+
+1. **Access the UI:** Open your browser and navigate to `https://wine-api-service-264324203120.us-central1.run.app/docs` (or `http://localhost:8080/docs` if running locally).
+2. **Authenticate:** * Click the **Authorize** button at the top right of the page.
+   * Enter the API Key: `super-secret-key-123`
+   * Click **Authorize**, then click **Close**.
+3. **Send a Request:**
+   * Click on the green **`POST /predict`** box to expand it.
+   * Click the **Try it out** button.
+   * Paste the following sample data into the **Request body** box:
+     ```json
+     {
+       "fixed_acidity": 7.4,
+       "volatile_acidity": 0.7,
+       "citric_acid": 0.0,
+       "residual_sugar": 1.9,
+       "chlorides": 0.076,
+       "free_sulfur_dioxide": 11.0,
+       "total_sulfur_dioxide": 34.0,
+       "density": 0.9978,
+       "pH": 3.51,
+       "sulphates": 0.56,
+       "alcohol": 9.4
+     }
+     ```
+   * Click the blue **Execute** button.
+4. **View Results:** Scroll down to the **Server response** section to see the output (`{
+  "prediction": 0,
+  "interpretation": "Bad Quality"
+}`).
+
 
 ## Deployment Architecture
 
