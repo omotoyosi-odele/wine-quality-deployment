@@ -10,8 +10,6 @@ The application is containerized using Docker and deployed on Google Cloud Run.
 
 **Base URL:** https://wine-api-service-264324203120.us-central1.run.app
 
-**Prediction URL:** https://wine-api-service-264324203120.us-central1.run.app/predict
-
 **Interactive Docs (Swagger UI):** [Click here to test the API](https://wine-api-service-264324203120.us-central1.run.app/docs)
 
 **API Key:** `super-secret-key-123`
