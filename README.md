@@ -103,7 +103,7 @@ curl -X 'POST' \
 FastAPI automatically generates an interactive graphical interface to test the API directly from your browser. 
 
 1. **Access the UI:** Open your browser and navigate to `https://wine-api-service-264324203120.us-central1.run.app/docs` (or `http://localhost:8080/docs` if running locally).
-2. **Authenticate:** * Click the **Authorize** button at the top right of the page.
+2. **Authenticate:** Click the **Authorize** button at the top right of the page.
    * Enter the API Key: `super-secret-key-123`
    * Click **Authorize**, then click **Close**.
 3. **Send a Request:**
@@ -126,11 +126,15 @@ FastAPI automatically generates an interactive graphical interface to test the A
      }
      ```
    * Click the blue **Execute** button.
-4. **View Results:** Scroll down to the **Server response** section to see the output (`{
+4. **View Results:** Scroll down to the **Server response** section to see the output
+
+```json
+{
   "prediction": 0,
   "interpretation": "Bad Quality"
-}`).
+}
 
+```
 
 ## Deployment Architecture
 
