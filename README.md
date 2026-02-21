@@ -2,19 +2,23 @@
 
 ## Overview
 
-This repository contains an end-to-end machine learning deployment project that predicts the quality of red wine based on its physicochemical properties. The project involves a predictive Random Forest model trained on the Cortez et al. (2009) `[Red Wine Quality dataset](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)`, a robust Scikit-Learn preprocessing pipeline, and a highly scalable REST API built with FastAPI.
+This repository contains an end-to-end machine learning deployment project that predicts the quality of red wine based on its physicochemical properties. The project involves a predictive Random Forest model trained on the Cortez et al. (2009) [Red Wine Quality dataset from Kaggle](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009), a robust Scikit-Learn preprocessing pipeline, and a highly scalable REST API built with FastAPI.
 
 The application is containerized using Docker and deployed on Google Cloud Run.
 
 ## Live API Endpoint
 
 **Base URL:** https://wine-api-service-264324203120.us-central1.run.app
-**Prediction URL:** `[https://[YOUR_CLOUD_RUN_URL]](https://wine-api-service-264324203120.us-central1.run.app)/predict` *(Replace with your actual URL)*
+
+**Prediction URL:** https://wine-api-service-264324203120.us-central1.run.app)/predict
+
 **Interactive Docs (Swagger UI):** [Click here to test the API](https://wine-api-service-264324203120.us-central1.run.app/docs)
+
 **API Key:** `super-secret-key-123`
+
 **Method:** `POST`
 
-https://wine-api-service-264324203120.us-central1.run.app/
+
 
 ## Repository Structure
 
@@ -32,8 +36,8 @@ To run the API directly on your local machine without Docker:
 
 ```bash
 # Clone the repository and navigate into it
-git clone [[YOUR_GITHUB_REPO_URL]](https://github.com/omotoyosi-odele/wine-quality-deployment.git)
-cd [YOUR_REPO_NAME]
+git clone https://github.com/omotoyosi-odele/wine-quality-deployment.git
+cd wine-quality-deployment
 
 # Create and activate a virtual environment
 python3 -m venv venv
@@ -64,11 +68,11 @@ docker run -p 8080:8080 wine-api
 
 ## Testing the API
 
-You can test the deployed API using `curl`. Ensure you replace `[YOUR_CLOUD_RUN_URL]` with the actual deployed URL (or `http://localhost:8080` if testing locally).
+You can test the deployed API using `curl`. Ensure you replace `[[YOUR_CLOUD_RUN_URL](https://wine-api-service-264324203120.us-central1.run.app/)]` with the actual deployed URL (or `http://localhost:8080` if testing locally).
 
 ```bash
 curl -X 'POST' \
-  'https://[YOUR_CLOUD_RUN_URL]/predict' \
+  'https://wine-api-service-264324203120.us-central1.run.app/predict' \
   -H 'accept: application/json' \
   -H 'X-API-Key: super-secret-key-123' \
   -H 'Content-Type: application/json' \
